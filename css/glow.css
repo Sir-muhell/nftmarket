@@ -1,8 +1,9 @@
 .glowing{
+    align-items: center;
 position: relative;
 min-width: 750px;
 height: 250px;
-/*margin: -50px;*/
+margin: -50px;
 transform-origin: right;
 animation: colorChange 5s linear infinite;
 
