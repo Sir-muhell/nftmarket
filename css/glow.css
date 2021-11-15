@@ -36,8 +36,10 @@ height: -200px;
 
 .glowing span{
     position: absolute;
-    top: calc(20px * var(--i));
-    left: calc(80px * var(--i));
+   /* top: calc(20px * var(--i));*/
+   top: -20px;
+    /*left: calc(80px * var(--i));*/
+    left: 40px;
     bottom: calc(80px * var(--i));
     right: calc(80px * var(--i));
 }
