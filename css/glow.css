@@ -123,13 +123,13 @@ height: -200px;
 
 .glowing span:nth-child(3n + 3){
 
-    animation: animate-reverse 8s alternate infinite;
+    animation: animate-reverse 4s alternate infinite;
 }
 
 
 .glowing span:nth-child(3n + 5){
 
-    animation: animate-reverse 4s alternate infinite;
+    animation: animate-reverse 5s alternate infinite;
 }
 
 .glowing span:nth-child(3n + 6){
@@ -139,7 +139,7 @@ height: -200px;
 
 .glowing span:nth-child(3n + 7){
 
-    animation: animate-reverse 12s alternate infinite;
+    animation: animate-reverse 2s alternate infinite;
 }
 
 
