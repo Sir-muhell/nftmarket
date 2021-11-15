@@ -3,7 +3,6 @@
 position: relative;
 /*min-width: 750px;*/
 /*height: 10px;*/
-margin: 200px;
 transform-origin: right;
 /*animation: colorChange 5s linear infinite;*/
 
@@ -49,7 +48,7 @@ transform-origin: right;
     left: -8%;
     width: 15px;
     height: 15px;
-    background: #f00;
+    background: #FE5F75;
     border-radius: 50%;
 }
 
