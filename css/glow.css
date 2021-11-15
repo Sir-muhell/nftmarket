@@ -54,42 +54,23 @@ animation: colorChange 5s linear infinite;
 }
 
 .glowing span:nth-child(3n + 1):before{
-    background: rgba(134,225,0,1);
-    box-shadow: 0 0 20px rgba(134, 255, 0, 1),
-                0 0 40px rgba(134, 255, 0, 1),
-                0 0 60px rgba(134, 255, 0, 1),
-                0 0 80px rgba(134, 255, 0, 1),
-                0 0 0 8px rgba(134, 255, 0, .1);
-
+    background: #FE5F75;
+    box-shadow: 0 0 20px #FE5F75,
+                0 0 60px #FE5F75;
+               
 }
 
 .glowing span:nth-child(3n + 2):before{
     background: rgba(225,214,0,1);
-    box-shadow: 0 0 20px rgba(225,214, 0, 1),
-                0 0 40px rgba(225,214, 0, 1),
-                0 0 60px rgba(225,214, 0, 1),
-                0 0 80px rgba(225,214, 0, 1),
-                0 0 0 8px rgba(225,214, 0, .1);
+    box-shadow: 0 0 20px #FE5F75,
+                0 0 60px #FE5F75;
 
 }
 
 .glowing span:nth-child(3n + 3):before{
     background: rgba(0,226,255,1);
-    box-shadow: 0 0 20px rgba(0,226,255,1),
-                0 0 40px rgba(0,226,255,1),
-                0 0 60px rgba(0,226,255,1),
-                0 0 80px rgba(0,226,255,1),
-                0 0 0 8px rgba(0,226,255,.1);
-
-}
-
-.glowing span:nth-child(3n + 4):before{
-    background: rgba(0,226,255,1);
-    box-shadow: 0 0 20px rgba(0,226,255,1),
-                0 0 40px rgba(0,226,255,1),
-                0 0 60px rgba(0,226,255,1),
-                0 0 80px rgba(0,226,255,1),
-                0 0 0 8px rgba(0,226,255,.1);
+    box-shadow: 0 0 20px #FE5F75,
+                0 0 60px #FE5F75;
 
 }
 
@@ -109,10 +90,7 @@ animation: colorChange 5s linear infinite;
     animation: animate-reverse 8s alternate infinite;
 }
 
-.glowing span:nth-child(3n+4){
 
-    animation: animate 10s alternate infinite;
-}
 
 @keyframes animate{
     0%{
