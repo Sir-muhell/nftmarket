@@ -3286,6 +3286,8 @@ a.wallet_link img {
 
 .phantom-logo{
    margin-inline: 40px;
+   max-width: 100%;
+   width: 70px;
 
 
 }
