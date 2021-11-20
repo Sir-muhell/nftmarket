@@ -1813,9 +1813,11 @@ button.placebid.price {
 }
 .why-choose-us-area {
     background: #161634;
+
 }
 div#why_we_are {
     padding-top: 10px;
+    align-content: space-around;
 }
 
 .single_feature_are {
@@ -2102,7 +2104,7 @@ p.eth-num {
 /* 	11.1 author details
 /*---------------------------------------------------*/
 
-.author-details-img {
+/* .author-details-img {
 }
 
 .author-details-img img {
@@ -2114,16 +2116,16 @@ p.eth-num {
 .author-text-link {
     position: relative;
     margin-left: 12rem;
-}
-a.author_name_link {
+} */
+/* a.author_name_link {
     color: #FE5F75;
     font-size: 1.2rem;
-}
+} */
 
-.author-text-link h6.author_name {
+/* .author-text-link h6.author_name {
     padding-bottom: .3rem;
     font-size: 1.4rem;
-}
+} */
 
 .follower-btn-counter {
     margin-top: 2rem;
@@ -2231,7 +2233,7 @@ a.btn.btn_buy {
     padding: 35px 0px;
     background:#22223e;
     box-shadow: 0 5px 65px -30px rgba(9,30,66,.3);
-    margin-top: -196px;
+    margin-top: -90px;
     margin-left: 50px;
     margin-right: 50px;
     border-radius: 4px;
@@ -2320,13 +2322,14 @@ ul.footer_nav {
     margin-bottom: 20px;
 }
 
-.footer_copyright {
-    margin-bottom: 20px;
-}
-
-.payment_method {
-    margin-bottom: 20px;
-}
+/* .footer_copyright { */
+    /* margin-bottom: 20px; */
+/* } */
+/* 
+.payment_method { */
+    /* margin-bottom: 20px; */
+/*      */
+/* } */
 
 ul.footer_nav li {
     list-style: none;
@@ -2343,17 +2346,17 @@ ul.footer_nav li a {
     font-size: 16px;	
 	transition:all .4s ease;
 }
-p.copyright_text {
+/* p.copyright_text {
 	padding: 0;
 	margin: 0; 
 	color: #e2e2e8 !important;
-}
+} */
 
 
-p.copyright_text span a {
+/* p.copyright_text span a {
     color: #FE5F75;
     font-weight: 500;
-}
+} */
 
 .social_profile a {
 	padding: 4px 5px;
@@ -3255,6 +3258,45 @@ a.wallet_link img {
 .single_product.wallet-single {
     padding: 2rem 1rem 2rem 2rem;
 	background:#22223e;
+}
+
+.wallet_address{
+    padding: 2rem 1rem 2rem 2rem;
+	background:#22223e;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 20px;
+
+}
+
+.wallet_address_ph{
+    margin-left: 30%;
+    border-color: slategray;
+    -moz-box-shadow: 0px 0px 0px;
+    -webkit-box-shadow: 0px 0px 0px;
+    -o-box-shadow: 0px 0px 0px;
+    box-shadow: 0px 0px 0px;
+    color: slategray;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 30px;
+    font-size: x-large;
+    
+}
+
+.phantom-logo{
+   margin-inline: 40px;
+
+
+}
+
+.phantom-text{
+    margin-inline: 43px;
+
+}
+
+.wallet-size{
+    width: fit-content;
 }
 
 a.wallet_link h6.wallet-name {
