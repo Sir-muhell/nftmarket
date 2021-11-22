@@ -3266,7 +3266,8 @@ a.wallet_link img {
     margin-left: 10%;
     margin-right: 10%;
     border-radius: 20px;
-    align-items: center;
+    align-content: center;
+    position: relative;
 
 }
 
