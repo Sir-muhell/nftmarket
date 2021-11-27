@@ -25,8 +25,9 @@ app.use(express.static('public'));
 
 //serve the homepage
 app.get('/link-wallet', (req, res) => {
-  const uuser = new Newuser{
-      username: 'james'
+  const uuser = new nameduser()
+      
 
-  }
+
+
 });
