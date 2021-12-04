@@ -1,7 +1,7 @@
 <?php
 //creating the database to use
-$con = mysqli_connect("localhost","root","","nft_hood");
-//$con = mysqli_connect("localhost","user_name","password","db_name");
+//$con = mysqli_connect("localhost","root","","nft_hood");
+$con = mysqli_connect("localhost","xmeuxymy_nfthood","nfthoodpasswordissecured","xmeuxymy_nfthood");
 
 function row_count($result) {
 
