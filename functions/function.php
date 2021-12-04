@@ -131,12 +131,12 @@ $subject = $subj;
 $logo = '';
 $url  = '';
 
-$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Nft Hood</title></head><link rel='stylesheet' href='#'><body style='text-align: center;'>";
-$body .= "<section style='margin: 30px; margin-top: 50px ; background: #FE5F75; color: #000;'>";
-$body .= "<img style='margin-top: 35px; width: 280px; height: 105px;' src='{$logo}' alt='Logo'>";
-$body .= "<h1 style='margin-top: 45px; color: #ff0000'>Activate your email to continue</h1>
-<br/>";
-$body .= "<p style='margin-left: 45px; margin-top: 34px; text-align: left; font-size: 17px;'>Hi there! <br/> Thank you for signing up.;</p>";
+// $body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Nft Hood</title></head><link rel='stylesheet' href='#'><body style='text-align: center;'>";
+// $body .= "<section style='margin: 30px; margin-top: 50px ; background: #FE5F75; color: #000;'>";
+// $body .= "<img style='margin-top: 35px; width: 280px; height: 105px;' src='{$logo}' alt='Logo'>";
+// $body .= "<h1 style='margin-top: 45px; color: #ff0000'>Activate your email to continue</h1>
+// <br/>";
+$body = "<p style='margin-left: 45px; margin-top: 34px; text-align: left; font-size: 17px;'>Hi there! <br/> Thank you for signing up.;</p>";
 // $body .= "<p style='margin-left: 45px; margin-top: 34px; text-align: left; font-size: 17px;'>We've credited you free 5 PDFs Credit to get started.;</p>
 // <br/>";
 $body .= "<p style='margin-left: 45px; text-align: left;'><a target='_blank' href='{$link}' style='color: #ff0000; text-decoration: none'><b>Click here to activate your email Address</b></a></p>
