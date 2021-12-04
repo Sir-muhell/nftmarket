@@ -1,3 +1,32 @@
+<?php include("functions/init.php");
+if(isset($_SESSION['login'])) {
+
+    unset($_SESSION['login']);
+}
+if(!isset($_GET['key'])) {
+
+    header("location: ./signup ");
+} else {
+
+    $pass = $_GET['key'];
+
+    $sql = "SELECT * FROM users WHERE `activator` = '$pass'";
+    $rsl = query($sql);
+    
+    if(row_count($rsl) == 1) {
+
+    $row = mysqli_fetch_array($rsl);
+
+    //activate user
+    $ssl = "UPDATE users SET `activated` = '1', `activator` = '' WHERE `activator` = '$pass'";
+    $res = query($ssl);
+
+    } else {
+
+        header("location: ./signup ");
+    }
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -36,7 +65,6 @@
 	</div>
 	<!-- Preloader-end --> 
 	
-<div class="mim_tm_all_wrap" data-magic-cursor="" data-color="crimson">	<!-- Mouse Animation -->
   
 	<header id="header-area" class="header-transparent sticky">	<!-- start header -->	
 			<!-- Start Top Search -->
@@ -124,10 +152,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center pt-200">
-						<h2 data-splitting class="breadcrumb-title wow fadeInUp" data-wow-duration=".003s" data-wow-delay=".003s">Sign In Now</h2>
+						<h2 data-splitting class="breadcrumb-title wow fadeInUp" data-wow-duration=".003s" data-wow-delay=".003s">Account Activated!</h2>
 						<ul class="breadcrumb-menu clearfix">
 							<li>
-								<a href="index.html">Home /</a> <a href="#" class="active">My Account</a>
+								<a href="index.html">Home /</a> <a href="#" class="active">activate</a>
 							</li>
 						</ul>					
 					</div>
@@ -135,64 +163,31 @@
 			</div>
 		</div>
 		<!-- End  Breadcrumb -->				
-	</div> <!-- End header hero area -->
-	<section class="dark-bg-all"> <!-- start dark bg area -->
-		<div id="account-contact-form" class="account-form-area pt-100"> <!-- start contact area -->
-			<div class="container"> <!-- start container			-->
-				<div class="row"> <!-- start row -->
-					<div class="col-md-6"> <!-- start col-6 -->
-						<div class="account_img mr-20 pt-50 wow fadeInDown" data-wow-duration=".2s" data-wow-delay=".2s">
-							<img src="img/extra/account.png" alt="contact" class="responsive-fluid" />
-						</div>
-					</div> <!-- end col-6 -->
-					<div class="col-md-6"> <!-- start col-6 -->
-						<div class="acount_form_bg text-center wow fadeInDown" data-wow-duration=".4s" data-wow-delay=".4s"> <!-- start form -->
+	</div>
+	<section class="dark-bg-all">	<!-- start dark bg area -->
+		<div id="account-contact-form" class="account-form-area pt-100"><!-- start contact area -->
+			<div class="container"><!-- start container -->
+				<div class="row"><!-- start row -->
+					
+					<div class="col-12"><!-- start col-6 -->
+						<div class="acount_form_bg text-center wow fadeInDown" data-wow-duration=".4s" data-wow-delay=".4s" style="visibility: visible; animation-duration: 0.4s; animation-delay: 0.4s;">
 							<div class="form-title pt-30">
-								<h2 class="account_form_title"> <span class="span-color">Sign</span> In</h2>
+								<h2 class="account_form_title"> <span class="span-color">Verification</span> Successful</h2>
 							</div>
 							<div class="row mt-5">
-								<div class="col-md-12">
+								<div class="col-lg-12">
 									<div class="account_form_area text-center">
-										<form id="account-form" method="post" enctype="multipart/form-data">
-											<div class="row">
-												<div class="form-group col-md-12 pb-10">
-													<input type="email" name="email" class="form-control account_style" id="email" placeholder="Email here" required="required">
-												</div>
-												<div class="form-group col-md-12 pb-10">
-													<input type="password" name="password" class="form-control account_style" id="password" placeholder="Password" required="required">
-												</div>
-												<div class="col-md-6">
-													<div class="checkbox">
-													  <label>
-														<input type="checkbox" class="checkbox-custom" value=""> <span class="checkbox-text"> Remember Me</span>
-													  </label>
-													</div>
-												</div>
-												<div class="col-md-6">
-													<div class="forget-password">
-													  <a href="" class="lost-password">Lost Password?</a>
-													</div>
-												</div>
-												<div class="col-md-12">
-													<div class="actions pt-30">
-														<input type="submit" value="Sign In" name="submit" id="submitButton" class="btn btn-account btn-contact-bg" title="Submit Your Message!" />
-													</div>
-												</div>
-											</div>
-										</form>
+										<a href="./signin"><input type="submit" value="Login Here" id="submit" class="btn btn-account btn-contact-bg" title="Login Here">	</a>
 									</div>                          
 								</div>
-								<div class="col-md-12">
-									<div class="account-alternative">
-										<p class="account_alter_text">Don't you have an account? <a href="signup.html"> Sign Up!</a></p>
-									</div>
-								</div>
+								
 							</div>					
-						</div> <!-- end form -->
-					</div> <!-- end col-6 -->
-				</div> <!-- end row -->
-			</div> <!-- end container -->
-		</div> <!-- end contact area -->
+						</div>
+					</div><!-- end col-6 -->
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</div><!-- end contact area -->
+		
 		<div id="why_we_are" class="why-choose-us pb-150"> <!-- start why area -->
 			<div class="container pb-30"> <!-- start container -->
 				<div class="row pt-100"> <!-- start row -->
@@ -367,13 +362,45 @@
 		<i class='bx bxs-chevron-up'></i>
 	</a> 
 	
-	<!-- CURSOR -->
-	<div class="mouse-cursor cursor-outer"></div>
-    <div class="mouse-cursor cursor-inner"></div>
-	<!-- /CURSOR -->	
-</div>	<!-- Mouse Cursor Animation End --> 	
-	
+	 <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div style="background: #FE5F75; color: #ff0000; border-radius: 20px 20px 20px 20px;" class="modal-content">
+                <div class="modal-body">
+                    <div id="msg" style="color: white;" class="text-center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
   <!-- Start JS File -->	
+  <!-- <script src="client.js"></script> -->
+ <!--  <script>
+	  const form = document.getElementById('submitButton')
+	  form.addEventListener('clicked', registerUser)
+
+	  //send user to backend as JSON
+
+	  async function registerUser(event){
+			event.preventDefault()
+			const name = document.getElementById('name');
+			const email = document.getElementById('email');
+			const password = document.getElementById('password');
+			
+			const result = await fetch('/api/register', {
+				method: 'POST',
+				headers: {
+					'content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					name, email,password
+				})
+			}).then((res) => res.json())
+
+				console.log(result)
+
+	  }
+  </script> -->
+  
   <script src="js/modernizr-3.8.0.min.js"></script>
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -381,14 +408,17 @@
   <script src="js/jquery.appear.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script> 
+  <script src="ajax.js"></script> 
   <script src="js/wow.js"></script>  
   <script src="js/splitting-animation.js"></script>
   <script src="js/splitting.min.js"></script>
   <script src="js/multi-countdown.js"></script>
   <script src="js/jquery.meanmenu.min.js"></script>
   <script src="js/main.js"></script>
+  
    <!-- End JS File --> 
 </body>
 
 </html>	
+	

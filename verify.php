@@ -1,9 +1,19 @@
+<?php include('functions/init.php'); 
+
+if(isset($_SESSION['login'])) {
+
+    unset($_SESSION['login']);
+}
+ $email = $_SESSION['usermail'];
+if(!isset($_SESSION['usemail'])) {
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>NftHood </title>	<!-- site title -->
+	<title>NftMarket | NFT Marketplace Responsive HTML Template</title>	<!-- site title -->
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<meta name="author" content="themetum Team" />
@@ -36,7 +46,6 @@
 	</div>
 	<!-- Preloader-end --> 
 	
-<div class="mim_tm_all_wrap" data-magic-cursor="" data-color="crimson">	<!-- Mouse Animation -->
   
 	<header id="header-area" class="header-transparent sticky">	<!-- start header -->	
 			<!-- Start Top Search -->
@@ -124,10 +133,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center pt-200">
-						<h2 data-splitting class="breadcrumb-title wow fadeInUp" data-wow-duration=".003s" data-wow-delay=".003s">Connect Wallet</h2>
+						<h2 data-splitting class="breadcrumb-title wow fadeInUp" data-wow-duration=".003s" data-wow-delay=".003s">Verification</h2>
 						<ul class="breadcrumb-menu clearfix">
 							<li>
-								<a href="index.html">Home /</a> <a href="#">Pages / </a> <a href="#" class="active">Wallet</a>
+								<a href="index.html">Home /</a> <a href="#" class="active">verify</a>
 							</li>
 						</ul>					
 					</div>
@@ -135,38 +144,78 @@
 			</div>
 		</div>
 		<!-- End  Breadcrumb -->				
-	</div><!-- end header hero area -->
-	<div class="dark-bg-all wallet-connent pt-100 pb-200"><!-- start dark bg area -->
-		<div class="container"><!-- start container -->
-			<div class="row"><!-- start row -->
-				<div class="col-md-6 col-sm-12 mt-10 pb-30"><!-- start col-6 -->
-					<div data-splitting class="section_intro wow fadeInUp" data-wow-duration=".003s" data-wow-delay=".003s">
-						<p>Add Wallet</p>
-						<h2 class="section_heading">Connect Wallet Easily</h2>
-					</div>
-				</div><!-- end col-6 -->
-				<div class="col-md-6 col-sm-12"><!-- start col-6 -->
-					<div class="section_description">
-						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Connect Wallet Explore the largest NFT marketplace with our beautiful NFT products. We want to be a part of your smile, 
-success and future growth. </p>
-					</div>
-				</div><!-- end col-6 -->
-			</div><!-- end row -->		
-			<div class="row"><!-- start row -->
-				<div class="col-md-4 col-sm-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"><!-- start col-4 -->
-					<div class="single_product wallet-single mt-50 pb-30"> <!-- Single Product -->
-						<a href="link-wallet.html" class="wallet_link">		
-							<img src="img/wallet/phantom.png" alt="" class="responsive-fluid" />
-							<h6 class="wallet-name">Phantom</h6>
-							<p class="wallet-description">Phantom is a Solana cryptocurrency wallet.</p>
-						</a>
-						<a href="./signin" class="arrow-wallet">
-							<i class='bx bx-arrow-back'></i>
-						</a>
-					</div>
-			</div><!-- End row -->
-		</div><!-- End container -->
-	</div><!-- End dark bg area -->
+	</div>
+	<section class="dark-bg-all">	<!-- start dark bg area -->
+		<div id="account-contact-form" class="account-form-area pt-100"><!-- start contact area -->
+			<div class="container"><!-- start container -->
+				<div class="row"><!-- start row -->
+					
+					<div class="col-12"><!-- start col-6 -->
+						<div class="acount_form_bg text-center wow fadeInDown" data-wow-duration=".4s" data-wow-delay=".4s" style="visibility: visible; animation-duration: 0.4s; animation-delay: 0.4s;">
+							<div class="form-title pt-30">
+								<h2 class="account_form_title"> <span class="span-color">Verify</span> Account</h2>
+							</div>
+							<div class="row mt-5">
+								<div class="col-lg-12">
+									<div class="account_form_area text-center">
+										<h3> A verification link has been sent to your email, <?php echo $email; ?> </h3>
+									</div>                          
+								</div>
+								
+							</div>					
+						</div>
+					</div><!-- end col-6 -->
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</div><!-- end contact area -->
+		
+		<div id="why_we_are" class="why-choose-us pb-150"> <!-- start why area -->
+			<div class="container pb-30"> <!-- start container -->
+				<div class="row pt-100"> <!-- start row -->
+					<div class="col-md-3 col-sm-6 mb-30"> <!-- start col-3 -->
+						<div class="single_feature_are how-one text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s;">
+							<div class="why_icon">
+								<i class="bx bx-wallet-alt"></i>
+							</div>
+							<div class="why_text">
+								<h6 class="why_title">Connect your Wallet</h6>
+							</div>
+						</div>
+					</div> <!-- end col-3 -->
+					<div class="col-md-3 col-sm-6 mb-30"> <!-- start col-3 -->
+						<div class="single_feature_are how-two text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.4s;">
+							<div class="why_icon">
+								<i class="bx bx-notepad"></i>
+							</div>
+							<div class="why_text">
+								<h6 class="why_title">Create a Collection</h6>
+							</div>
+						</div>
+					</div> <!-- end col-3 -->
+					<div class="col-md-3 col-sm-6 mb-30"> <!-- start col-3 -->
+						<div class="single_feature_are how-three text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.6s;">
+							<div class="why_icon">
+								<i class="bx bx-pyramid"></i>
+							</div>
+							<div class="why_text">
+								<h6 class="why_title">Add NFT Products</h6>
+							</div>
+						</div>
+					</div> <!-- end col-3 -->
+					<div class="col-md-3 col-sm-6 mb-30"> <!-- start col-3 -->
+						<div class="single_feature_are how-four text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".9s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.9s;">
+							<div class="why_icon">
+								<i class="bx bx-grid"></i>
+							</div>
+							<div class="why_text">
+								<h6 class="why_title">Ready for Sale</h6>
+							</div>
+						</div>
+					</div> <!-- end col-3 -->
+				</div> <!-- end row -->
+			</div> <!-- end container -->
+		</div> <!-- end why area  -->
+	</section> <!-- end dark bg area -->
 	
 	<footer id="footer_area" class="footer_area_bg"> <!-- start footer area -->
 		<div class="container"> <!-- start container -->
@@ -275,8 +324,11 @@ success and future growth. </p>
 						<a href="index.html"><img src="img/logo.png" alt="" class="responsive-fluid" /></a>
 					</div>
 				</div> <!-- end col-2 footer logo -->
-				
-				
+				<div class="col-md-7  col-sm-12"> <!-- col-3 footer copyright -->
+					<div class="footer_copyright">
+						<p class="copyright_text text-center">All right reserved & designed by <span><a href="#">NftMarket</a></span></p>
+					</div>
+				</div><!-- end col-3 footer copyright -->
 				<div class="col-md-3  col-sm-12"><!-- col-3 footer payment -->
 					<div class="payment_method">
 						<img src="img/footer/payment.png" alt="" class="responsive-fluid" />
@@ -291,13 +343,45 @@ success and future growth. </p>
 		<i class='bx bxs-chevron-up'></i>
 	</a> 
 	
-	<!-- CURSOR -->
-	<div class="mouse-cursor cursor-outer"></div>
-    <div class="mouse-cursor cursor-inner"></div>
-	<!-- /CURSOR -->	
-</div>	<!-- Mouse Cursor Animation End --> 	
-	
+	 <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div style="background: #FE5F75; color: #ff0000; border-radius: 20px 20px 20px 20px;" class="modal-content">
+                <div class="modal-body">
+                    <div id="msg" style="color: white;" class="text-center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
   <!-- Start JS File -->	
+  <!-- <script src="client.js"></script> -->
+ <!--  <script>
+	  const form = document.getElementById('submitButton')
+	  form.addEventListener('clicked', registerUser)
+
+	  //send user to backend as JSON
+
+	  async function registerUser(event){
+			event.preventDefault()
+			const name = document.getElementById('name');
+			const email = document.getElementById('email');
+			const password = document.getElementById('password');
+			
+			const result = await fetch('/api/register', {
+				method: 'POST',
+				headers: {
+					'content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					name, email,password
+				})
+			}).then((res) => res.json())
+
+				console.log(result)
+
+	  }
+  </script> -->
+  
   <script src="js/modernizr-3.8.0.min.js"></script>
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -305,14 +389,17 @@ success and future growth. </p>
   <script src="js/jquery.appear.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>  
+  <script src="js/jquery.waypoints.min.js"></script> 
+  <script src="ajax.js"></script> 
   <script src="js/wow.js"></script>  
   <script src="js/splitting-animation.js"></script>
   <script src="js/splitting.min.js"></script>
   <script src="js/multi-countdown.js"></script>
   <script src="js/jquery.meanmenu.min.js"></script>
   <script src="js/main.js"></script>
+  
    <!-- End JS File --> 
 </body>
 
 </html>	
+	

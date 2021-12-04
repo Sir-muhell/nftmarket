@@ -1,9 +1,31 @@
+<?php
+	if(!isset($_SESSION['login'])) {
+
+    
+    
+} else {
+
+    $data = $_SESSION['login'];
+    $sql = "SELECT * FROM user WHERE `username` = '$data'";
+    $rsl = query($sql);
+
+    if(row_count($rsl) == 0) {
+
+        
+        
+    } else{
+    $row = mysqli_fetch_array($rsl);
+    }
+    
+}
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>NftMarket | NFT Marketplace Responsive HTML Template</title>
+	<title>NftMarket | NFT Hood</title>
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<meta name="author" content="themetum Team" />
@@ -104,7 +126,12 @@
 							<div class="menu-social icon-set"> <!-- header right  -->
 								<ul class="social-list list-style-none mb-0">
 									<li><a class="search" href="#"><i class="bx bx-search-alt"></i></a></li>
-									<li><a href="#"><i class='bx bx-user'></i></a></li>
+									<!-- <?php if ($data == '') {
+									?> -->
+									<li><a href="./signup"><i class='bx bx-user'></i></a></li>
+									<!-- <?php } else {  ?> -->
+									<!-- <li><a href=""><p><?php echo $row['username'];?></p></a></li>
+								<?php } ?> -->
 									<li><a href="#"><i class='bx bx-cart-alt' ></i></a></li>
 								</ul>
 							</div> <!-- end header right  -->

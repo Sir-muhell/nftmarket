@@ -1,3 +1,4 @@
+<?php include('functions/init.php'); ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -36,7 +37,6 @@
 	</div>
 	<!-- Preloader-end --> 
 	
-<div class="mim_tm_all_wrap" data-magic-cursor="" data-color="crimson">	<!-- Mouse Animation -->
   
 	<header id="header-area" class="header-transparent sticky">	<!-- start header -->	
 			<!-- Start Top Search -->
@@ -153,23 +153,29 @@
 							<div class="row mt-5">
 								<div class="col-md-12">
 									<div class="account_form_area text-center">
-										<form id="account-form" method="post" enctype="multipart/form-data">
+										<form  method="post">
 											<div class="row">
 												<div class="form-group account_input col-md-12 pb-10 mr-20">
-													<input type="text" name="name" class="form-control account_style" id="name" placeholder="User Name" required="required">
+													<input type="text" name="name" id="name" class="form-control account_style" id="name" placeholder="User Name">
 												</div>
 												<div class="form-group account_input col-md-12 pb-10">
-													<input type="email" name="email" class="form-control account_style" id="email" placeholder="Email here" required="required">
+													<input type="email" name="email" id="email" class="form-control account_style" id="email" placeholder="Email here">
 												</div>
 												<div class="form-group account_input col-md-12 pb-10">
-													<input type="password" name="password" class="form-control account_style" id="password" placeholder="Password" required="required">
+													<input type="password" name="password" id="password" class="form-control account_style" id="password" placeholder="Password">
 												</div>
+												<div class="form-group account_input col-md-12 pb-10">
+													<input type="password" name="password" id="cpassword" class="form-control account_style" id="password" placeholder="Confirm Password" >
+												</div>
+												<div><center><p class="account_term pt-20"><a href="#"></a></p></center></div>
 												<div class="col-md-12">
 													<p class="account_term pt-20">Agree to <a href="#">Privacy Policy</a> by creating account</p>
 												</div>
+												
 												<div class="col-md-12" >
 													<div class="actions pt-30">
-														<a href="../nftmarket/link-wallet.html"><input type="submit" value="Create an Account" name="submit" id="submitButton" class="btn btn-account btn-contact-bg" title="Submit Your Message!">	</a>
+														<!-- <a href=""><input type="submit" value="Create an Account" id="submit" class="btn btn-account btn-contact-bg" title="Submit Your Message!">	</a> -->
+														<button type="button" class="btn btn-account btn-contact-bg" id="submit">Create an Account</button>
 														</div>												
 												</div>
 											</div>
@@ -178,7 +184,7 @@
 								</div>
 								<div class="col-md-12">
 									<div class="account-alternative">
-										<p class="account_alter_text">Already have an account? <a href="signin.html"> Log in!</a></p>
+										<p class="account_alter_text">Already have an account? <a href="./signin"> Log in!</a></p>
 									</div>
 								</div>
 							</div>					
@@ -362,15 +368,19 @@
 		<i class='bx bxs-chevron-up'></i>
 	</a> 
 	
-	<!-- CURSOR -->
-	<div class="mouse-cursor cursor-outer"></div>
-    <div class="mouse-cursor cursor-inner"></div>
-	<!-- /CURSOR -->	
-</div>	<!-- Mouse Cursor Animation End --> 	
-	
+	 <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div style="background: #FE5F75; color: #ff0000; border-radius: 20px 20px 20px 20px;" class="modal-content">
+                <div class="modal-body">
+                    <div id="msg" style="color: white;" class="text-center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
   <!-- Start JS File -->	
-  <script src="client.js"></script>
-  <script>
+  <!-- <script src="client.js"></script> -->
+ <!--  <script>
 	  const form = document.getElementById('submitButton')
 	  form.addEventListener('clicked', registerUser)
 
@@ -395,7 +405,8 @@
 				console.log(result)
 
 	  }
-  </script>
+  </script> -->
+  
   <script src="js/modernizr-3.8.0.min.js"></script>
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -403,13 +414,15 @@
   <script src="js/jquery.appear.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>  
+  <script src="js/jquery.waypoints.min.js"></script> 
+  <script src="ajax.js"></script> 
   <script src="js/wow.js"></script>  
   <script src="js/splitting-animation.js"></script>
   <script src="js/splitting.min.js"></script>
   <script src="js/multi-countdown.js"></script>
   <script src="js/jquery.meanmenu.min.js"></script>
   <script src="js/main.js"></script>
+  
    <!-- End JS File --> 
 </body>
 
