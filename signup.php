@@ -184,7 +184,8 @@
 								</div>
 								<div class="col-md-12">
 									<div class="account-alternative">
-										<p class="account_alter_text">Already have an account? <a href="./signin"> Log in!</a></p>
+										<p class="account_alter_text">Already have an account? <a href="./
+											signin"> Log in!</a></p>
 									</div>
 								</div>
 							</div>					

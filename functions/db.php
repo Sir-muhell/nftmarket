@@ -3,6 +3,7 @@
 //$con = mysqli_connect("localhost","root","","nft_hood");
 $con = mysqli_connect("localhost","xmeuxymy_nfthood","nfthoodpasswordissecured","xmeuxymy_nfthood");
 
+
 function row_count($result) {
 
 global $con;
