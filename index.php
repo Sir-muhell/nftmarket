@@ -82,14 +82,14 @@
 				<div class="container container-main-menu">
 					<div class="main-menu d-flex align-items-center">
 						<div class="logo"> <!-- start logo  -->
-							<a href="index.html" class="navbar-brand">
+							<a href="./" class="navbar-brand">
 								<img src="img/logo.png" alt="logo">
 							</a>
 						</div>	<!-- End logo  -->
 						<div class="menu ml-auto d-flex"> <!-- start menu  -->
 							<nav class="navigation" id="mobile-menu">
 								<ul class="menu-list list-style-none mb-0"> <!-- start ul  -->
-									<li><a href="index.html">Home</a></li>
+									<li><a href="./">Home</a></li>
 									<li class="has-children"><a href="#">MarketPlace</a>
 										<ul class="sub-menu">
 											<li><a href="explores.html">All NFTs</a></li>
@@ -108,7 +108,7 @@
 									</li>
 									<li class="has-children"><a href="#">Resources</a>
 										<ul class="sub-menu">
-											<li><a href="signin.html">FAQs</a></li>
+											<li><a href="./signin">FAQs</a></li>
 											<li><a href="signup.html">Discord Community</a></li>
 											<li><a href="testimonials.html">Blog</a></li>
 											<li><a href="authors.html">Newsletter</a></li>
@@ -128,7 +128,7 @@
 									<li><a class="search" href="#"><i class="bx bx-search-alt"></i></a></li>
 									<!-- <?php if ($data == '') {
 									?> -->
-									<li><a href="./signup"><i class='bx bx-user'></i></a></li>
+									<li><a href="./signin"><i class='bx bx-user'></i></a></li>
 									<!-- <?php } else {  ?> -->
 									<!-- <li><a href=""><p><?php echo $row['username'];?></p></a></li>
 								<?php } ?> -->
@@ -2000,7 +2000,7 @@ success and future growth. </p>
 							<ul class="footer_nav">
 								<li><a href="contact.html">My Profile</a></li>
 								<li><a href="signup.html">My Collections</a></li>
-								<li><a href="signin.html">Favourites</a></li>
+								<li><a href="./signin">Favourites</a></li>
 								<li><a href="contact.html">Settings</a></li>
 								<li><a href="authors.html">Privacy Policy</a></li>
 								<li><a href="authors.html">Terms and Conditions</a></li>

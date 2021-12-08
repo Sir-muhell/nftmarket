@@ -6,6 +6,7 @@ if(isset($_SESSION['login'])) {
 }
  $email = $_SESSION['usermail'];
 if(!isset($_SESSION['usemail'])) {
+	header("location: ./signup ");
 }
 ?>
 <!doctype html>
@@ -90,7 +91,7 @@ if(!isset($_SESSION['usemail'])) {
 									</li>
 									<li class="has-children"><a href="#">Pages</a>
 										<ul class="sub-menu">
-											<li><a href="signin.html">My Account</a></li>
+											<li><a href="./signin.html">My Account</a></li>
 											<li><a href="signup.html">Sign Up</a></li>
 											<li><a href="testimonials.html">Testimonials</a></li>
 											<li><a href="authors.html">Authors</a></li>
@@ -108,7 +109,7 @@ if(!isset($_SESSION['usemail'])) {
 							<div class="menu-social icon-set">
 								<ul class="social-list list-style-none mb-0">
 									<li><a class="search" href="#"><i class="bx bx-search-alt"></i></a></li>
-									<li><a href="#"><i class='bx bx-user'></i></a></li>
+									<li><a href="./signin"><i class='bx bx-user'></i></a></li>
 									<li><a href="#"><i class='bx bx-cart-alt' ></i></a></li>
 								</ul>
 							</div>
@@ -292,7 +293,7 @@ if(!isset($_SESSION['usemail'])) {
 							<ul class="footer_nav">
 								<li><a href="contact.html">Privacy Policy</a></li>
 								<li><a href="signup.html">Sign up</a></li>
-								<li><a href="signin.html">Sign in</a></li>
+								<li><a href="./signin.html">Sign in</a></li>
 								<li><a href="contact.html">Pre-sale Questions</a></li>
 								<li><a href="authors.html">Terms & Conditions</a></li>
 							</ul>

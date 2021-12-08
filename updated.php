@@ -1,4 +1,11 @@
-<?php include('functions/init.php'); ?>
+<?php include('functions/init.php'); 
+
+if(isset($_SESSION['login'])) {
+
+    unset($_SESSION['login']);
+}
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -57,14 +64,14 @@
 				<div class="container container-main-menu">	<!-- Container -->
 					<div class="main-menu d-flex align-items-center">
 						<div class="logo">	<!-- Logo -->
-							<a href="./" class="navbar-brand">
+							<a href="index.html" class="navbar-brand">
 								<img src="img/logo.png" alt="logo">
 							</a>
 						</div>	<!-- End Logo -->
 						<div class="menu ml-auto d-flex">
 							<nav class="navigation" id="mobile-menu">
 								<ul class="menu-list list-style-none mb-0">
-									<li><a href="./">Home</a></li>
+									<li><a href="index.html">Home</a></li>
 									<li class="has-children"><a href="#">Explore NFT</a>
 										<ul class="sub-menu">
 											<li><a href="explores.html">Explore One</a></li>											
@@ -81,7 +88,7 @@
 									</li>
 									<li class="has-children"><a href="#">Pages</a>
 										<ul class="sub-menu">
-											<li><a href="./signin">My Account</a></li>
+											<li><a href="./signin.html">My Account</a></li>
 											<li><a href="signup.html">Sign Up</a></li>
 											<li><a href="testimonials.html">Testimonials</a></li>
 											<li><a href="authors.html">Authors</a></li>
@@ -124,10 +131,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center pt-200">
-						<h2 data-splitting class="breadcrumb-title wow fadeInUp" data-wow-duration=".003s" data-wow-delay=".003s">Register Easily</h2>
+						<h2 data-splitting class="breadcrumb-title wow fadeInUp" data-wow-duration=".003s" data-wow-delay=".003s">Updated Password</h2>
 						<ul class="breadcrumb-menu clearfix">
 							<li>
-								<a href="./">Home /</a> <a href="#" class="active">sign up</a>
+								<a href="index.html">Home </a> <a href="#" class="active"></a>
 							</li>
 						</ul>					
 					</div>
@@ -140,54 +147,25 @@
 		<div id="account-contact-form" class="account-form-area pt-100"><!-- start contact area -->
 			<div class="container"><!-- start container -->
 				<div class="row"><!-- start row -->
-					<div class="col-md-6"><!-- start col-6 -->
-						<div class="account_img mr-20 pt-100 wow fadeInDown" data-wow-duration=".2s" data-wow-delay=".2s">
-							<img src="img/extra/account.png" alt="contact" class="responsive-fluid" />
-						</div>
-					</div><!-- end col-6 -->
-					<div class="col-md-6"><!-- start col-6 -->
+					
+					<div class="col-12"><!-- start col-6 -->
 						<div class="acount_form_bg text-center wow fadeInDown" data-wow-duration=".4s" data-wow-delay=".4s" style="visibility: visible; animation-duration: 0.4s; animation-delay: 0.4s;">
 							<div class="form-title pt-30">
-								<h2 class="account_form_title"> <span class="span-color">Sign</span> Up</h2>
+								<h2 class="account_form_title"> <span class="span-color">Updated</span> Password</h2>
 							</div>
 							<div class="row mt-5">
-								<div class="col-md-12">
+								<div class="col-lg-12">
 									<div class="account_form_area text-center">
-										<form  method="post">
-											<div class="row">
-												<div class="form-group account_input col-md-12 pb-10 mr-20">
-													<input type="text" name="name" id="name" class="form-control account_style" id="name" placeholder="User Name">
-												</div>
-												<div class="form-group account_input col-md-12 pb-10">
-													<input type="email" name="email" id="email" class="form-control account_style" id="email" placeholder="Email here">
-												</div>
-												<div class="form-group account_input col-md-12 pb-10">
-													<input type="password" name="password" id="password" class="form-control account_style" placeholder="Password">
-												</div>
-												<div class="form-group account_input col-md-12 pb-10">
-													<input type="password" name="password" id="cpassword" class="form-control account_style" placeholder="Confirm Password" >
-												</div>
-												<div><center><p class="account_term pt-20"><a href="#"></a></p></center></div>
-												<div class="col-md-12">
-													<p class="account_term pt-20">Agree to <a href="#">Privacy Policy</a> by creating account</p>
-												</div>
-												
-												<div class="col-md-12" >
-													<div class="actions pt-30">
-														<!-- <a href=""><input type="submit" value="Create an Account" id="submit" class="btn btn-account btn-contact-bg" title="Submit Your Message!">	</a> -->
-														<button type="button" class="btn btn-account btn-contact-bg" id="submit">Create an Account</button>
-														</div>												
-												</div>
-											</div>
-										</form>
+										<h3> Your Password has successfully been updated! </h3>
 									</div>                          
 								</div>
 								<div class="col-md-12">
-									<div class="account-alternative">
-										<p class="account_alter_text">Already have an account? <a href="./
-											signin"> Log in!</a></p>
+									<div class="actions pt-30">
+										<a href="./signin"><input type="submit" value="SignIn" class="btn btn-account btn-contact-bg" >	
+										</a>
 									</div>
 								</div>
+								
 							</div>					
 						</div>
 					</div><!-- end col-6 -->
@@ -318,7 +296,7 @@
 							<ul class="footer_nav">
 								<li><a href="contact.html">Privacy Policy</a></li>
 								<li><a href="signup.html">Sign up</a></li>
-								<li><a href="./signin">Sign in</a></li>
+								<li><a href="./signin.html">Sign in</a></li>
 								<li><a href="contact.html">Pre-sale Questions</a></li>
 								<li><a href="authors.html">Terms & Conditions</a></li>
 							</ul>
@@ -347,7 +325,7 @@
 			<div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s"> <!-- start row -->
 				<div class="col-md-2 col-sm-6"> <!-- col-2 footer logo -->
 					<div class="footer_logo">
-						<a href="./"><img src="img/logo.png" alt="" class="responsive-fluid" /></a>
+						<a href="index.html"><img src="img/logo.png" alt="" class="responsive-fluid" /></a>
 					</div>
 				</div> <!-- end col-2 footer logo -->
 				<div class="col-md-7  col-sm-12"> <!-- col-3 footer copyright -->

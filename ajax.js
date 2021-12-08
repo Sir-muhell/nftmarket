@@ -69,17 +69,17 @@ $(document).ready(function () {
 
   //forgot
   $("#forgot").click(function () {
-    var fgeml = $("#fgeml").val();
+    var ffemail = $("#femail").val();
 
-    if (fgeml == "" || fgeml == null) {
+    if (ffemail == "" || ffemail == null) {
       $("#msg").html("Please insert your email");
     } else {
-      $("#msg").html("Loading...Please Wait!");
+      $("#msg").html("Loading... Please Wait!");
 
       $.ajax({
         type: "post",
         url: "functions/init.php",
-        data: { fgeml: fgeml },
+        data: { ffemail: ffemail },
         success: function (data) {
           $("#msg").html(data);
         },
@@ -90,18 +90,19 @@ $(document).ready(function () {
   });
 
   //reset
-  $("#reset").click(function () {
-    var fgpword = $("#fgpword").val();
-    var fgcpword = $("#fgcpword").val();
-    var act = $("#act").text();
+  $("#update").click(function () {
+    var fpassword = $("#fpassword").val();
+    var cfpassword = $("#cfpassword").val();
+    var mail = $("#data").text();
+    console.log(mail);
 
-    if (fgpword == "" || fgpword == null) {
+    if (fpassword == "" || fpassword == null) {
       $("#msg").html("Please create a password");
     } else {
-      if (fgcpword == "" || fgcpword == null) {
+      if (cfpassword == "" || cfpassword == null) {
         $("#msg").html("Confirm Your Password");
       } else {
-        if (fgpword != fgcpword) {
+        if (cfpassword != cfpassword) {
           $("#msg").html("Password does not match!");
         } else {
           $("#msg").html("Loading...Please Wait!");
@@ -109,7 +110,7 @@ $(document).ready(function () {
           $.ajax({
             type: "post",
             url: "functions/init.php",
-            data: { fgpword: fgpword, fgcpword: fgcpword, act: act },
+            data: { fpassword: fpassword, cfpassword: cfpassword, mail: mail },
             success: function (data) {
               $("#msg").html(data);
             },

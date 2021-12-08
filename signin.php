@@ -58,14 +58,14 @@
 				<div class="container container-main-menu">	<!-- Container -->
 					<div class="main-menu d-flex align-items-center">
 						<div class="logo">	<!-- Logo -->
-							<a href="index.html" class="navbar-brand">
+							<a href="./" class="navbar-brand">
 								<img src="img/logo.png" alt="logo">
 							</a>
 						</div>	<!-- End Logo -->
 						<div class="menu ml-auto d-flex">
 							<nav class="navigation" id="mobile-menu">
 								<ul class="menu-list list-style-none mb-0">
-									<li><a href="index.html">Home</a></li>
+									<li><a href="./">Home</a></li>
 									<li class="has-children"><a href="#">Explore NFT</a>
 										<ul class="sub-menu">
 											<li><a href="explores.html">Explore One</a></li>											
@@ -82,7 +82,7 @@
 									</li>
 									<li class="has-children"><a href="#">Pages</a>
 										<ul class="sub-menu">
-											<li><a href="signin.html">My Account</a></li>
+											<li><a href="./signin">My Account</a></li>
 											<li><a href="signup.html">Sign Up</a></li>
 											<li><a href="testimonials.html">Testimonials</a></li>
 											<li><a href="authors.html">Authors</a></li>
@@ -100,7 +100,7 @@
 							<div class="menu-social icon-set">
 								<ul class="social-list list-style-none mb-0">
 									<li><a class="search" href="#"><i class="bx bx-search-alt"></i></a></li>
-									<li><a href="#"><i class='bx bx-user'></i></a></li>
+									<li><a href="./signin"><i class='bx bx-user'></i></a></li>
 									<li><a href="#"><i class='bx bx-cart-alt' ></i></a></li>
 								</ul>
 							</div>
@@ -128,7 +128,7 @@
 						<h2 data-splitting class="breadcrumb-title wow fadeInUp" data-wow-duration=".003s" data-wow-delay=".003s">Sign In Now</h2>
 						<ul class="breadcrumb-menu clearfix">
 							<li>
-								<a href="index.html">Home /</a> <a href="#" class="active">My Account</a>
+								<a href="./">Home /</a> <a href="#" class="active">My Account</a>
 							</li>
 						</ul>					
 					</div>
@@ -171,7 +171,7 @@
 												</div>
 												<div class="col-md-6">
 													<div class="forget-password">
-													  <a href="" class="lost-password">Forgot Password?</a>
+													  <a href="./forgot" class="lost-password">Forgot Password?</a>
 													</div>
 												</div>
 												<div class="col-md-12">
@@ -317,7 +317,7 @@
 							<ul class="footer_nav">
 								<li><a href="contact.html">Privacy Policy</a></li>
 								<li><a href="signup.html">Sign up</a></li>
-								<li><a href="signin.html">Sign in</a></li>
+								<li><a href="./signin">Sign in</a></li>
 								<li><a href="contact.html">Pre-sale Questions</a></li>
 								<li><a href="authors.html">Terms & Conditions</a></li>
 							</ul>
@@ -346,7 +346,7 @@
 			<div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s"> <!-- start row -->
 				<div class="col-md-2 col-sm-6"> <!-- col-2 footer logo -->
 					<div class="footer_logo">
-						<a href="index.html"><img src="img/logo.png" alt="" class="responsive-fluid" /></a>
+						<a href="./"><img src="img/logo.png" alt="" class="responsive-fluid" /></a>
 					</div>
 				</div> <!-- end col-2 footer logo -->
 				<div class="col-md-7  col-sm-12"> <!-- col-3 footer copyright -->
