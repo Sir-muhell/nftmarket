@@ -8,14 +8,19 @@ if(isset($_SESSION['login'])) {
 
 if(!isset($_GET['key'])) {
 
-    header("loca
-} else {tion: ./signup ");
+    header("location: ./signup ");
+} else {
     
 
     $data = $_GET['key'];
 
     $sql = "SELECT * FROM users WHERE `activator` = '$data'";
     $rsl = query($sql);
+    $row = mysqli_fetch_array($rsl);
+    $data = $row['email'];
+
+    
+
     
     if(row_count($rsl) == 0) {
         
@@ -24,7 +29,6 @@ if(!isset($_GET['key'])) {
     } 
 }
 ?>
-
 
 
 <!doctype html>
@@ -178,7 +182,7 @@ if(!isset($_GET['key'])) {
                                 <input type="password" name="password" id="cfpassword" class="form-control account_style" placeholder="Confirm Password" >
                             </div>
                             <div><center><p class="account_term pt-20"><a href="#"></a></p></center></div>
-                            <div><p id="data" hidden><?php echo $data ?></p></div>
+                            <div><p id="data" hidden><?php echo $data; ?></p></div>
                             <div class="row mt-5">
                                 <div class="col-lg-12">
                                     <div class="account_form_area text-center">

@@ -268,4 +268,4 @@ if(isset($_POST['fpassword']) && isset($_POST['cfpassword']) && isset($_POST['ma
 	echo 'Loading...Please Wait!';
 	echo '<script>window.location.href ="./updated"</script>';
 }
-?>
+?> 
