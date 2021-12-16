@@ -190,8 +190,8 @@ $send = mail($to, $subject, $body, $headers);
 
 		}else {
 
-		         echo 'Loading...Please Wait!';
-                         echo '<script>window.location.href ="./forgot"</script>';;
+		         echo 'Wrong Password!';
+                         
 		}
 	}
 
