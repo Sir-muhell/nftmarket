@@ -247,7 +247,7 @@ $headers .= "Importance: High\n";
 $subject = $subj;
 
 
-$body = "<p style='margin-left: 45px; margin-top: 34px; text-align: left; font-size: 17px;'>Hi there! <br/> Thank you for signing up.;</p>";
+$body = "<p style='margin-left: 45px; margin-top: 34px; text-align: left; font-size: 17px;'>Hello, <br/>you are about to chage your password. </p>";
 $body .= "<p style='margin-left: 45px; text-align: left;'><a target='_blank' href='{$link}' style='color: #ff0000; text-decoration: none'><b>Click here to recover your password</b></a></p>
 <br/>";
 $send = mail($to, $subject, $body, $headers);
