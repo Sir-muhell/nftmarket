@@ -190,7 +190,7 @@ $send = mail($to, $subject, $body, $headers);
 
 		}else {
 
-		         echo 'Wrong Password!';
+		         echo 'Wrong Username or Password!';
                          
 		}
 	}
